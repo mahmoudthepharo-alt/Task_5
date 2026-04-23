@@ -1,0 +1,30 @@
+1 - What do symbols like -rw-r--r-- mean?
+owner can read and write while everyone else can only read 
+
+
+2 - Which file is executable? How do you know?
+chmod 755 script.sh
+because (ls -l) shows -rwxr-xr-x for it and x mean execute permission is enabled
+
+
+3 - Which file is only accessible by its owner?
+chmod 600 secret.txt
+because (ls -l) shows -rw------- for it which means only the owner has read and write , and no access for any other one
+
+
+4 - What is the difference between file1.txt and secret.txt?
+file1.txt = readable by every on
+secret.txt = only owner can read and write and any one other can't
+
+
+5 - What do the three parts of the permissions represent (owner, group, others)?
+owner is the one who created the file
+group is a collection of users who can share files permission between them
+others means all users on the system who are not owner or in the group
+example (-rw-r--r--)
+first one is the owner (rw)
+second one is the group (r-)
+third one is the others (r-)
+
+
+note: I have learned the difference between (owner, group, others) and how to read (ls -l) output 
